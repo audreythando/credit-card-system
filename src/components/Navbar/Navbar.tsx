@@ -19,6 +19,10 @@ export default function ButtonAppBar() {
     navigate("/table");
     handleClose();
   };
+  const handleCreditCards = () => {
+    navigate("/credit-card");
+    handleClose();
+  };
 
   const logout = () => {
     navigate("/");
@@ -109,6 +113,9 @@ export default function ButtonAppBar() {
           className="drawer-background"
         >
           <List sx={{ backgroundColor: "#081f37", height: "100vh" }}>
+            <ListItem onClick={handleCreditCards}>
+              <ListItemText primary="Credit Cards " />
+            </ListItem>
             <ListItem onClick={handleCreditCardsTable}>
               <ListItemText primary="Credit Cards Table" />
             </ListItem>
