@@ -44,7 +44,7 @@ const CreditCard: React.FC<CreditCardProps> = ({ onCardSubmit }) => {
   });
 
 
-  const [focus, setFocus] = useState<"number" | "name" | "expiry" | "cvc" | "country" | undefined>(undefined);
+  const [, setFocus] = useState<"number" | "name" | "expiry" | "cvc" | "country" | undefined>(undefined);
   const [isBlockedCountry, setIsBlockedCountry] = useState<boolean>(false);
   const [countryMenuAnchorEl, setCountryMenuAnchorEl] = useState<null | HTMLElement>(null);
 
@@ -254,13 +254,13 @@ const CreditCard: React.FC<CreditCardProps> = ({ onCardSubmit }) => {
                       style={{ fontSize: "small", color: "red" }}
                     />
                     {isBlockedCountry && (
-                      <div
+                      <Box
                         className="error"
                         style={{ fontSize: "small", color: "red" }}
                       >
                         Credit card submission is blocked for the selected
                         country.
-                      </div>
+                      </Box>
                     )}
                     <Popover
                       open={Boolean(countryMenuAnchorEl)}
@@ -271,7 +271,7 @@ const CreditCard: React.FC<CreditCardProps> = ({ onCardSubmit }) => {
                         horizontal: "left",
                       }}
                     >
-                      <div
+                      <Box
                         style={{
                           maxHeight: "200px",
                           overflowY: "scroll",
@@ -290,7 +290,7 @@ const CreditCard: React.FC<CreditCardProps> = ({ onCardSubmit }) => {
                             {option}
                           </MenuItem>
                         ))}
-                      </div>
+                      </Box>
                     </Popover>
                   </Grid>
                 </Grid>
