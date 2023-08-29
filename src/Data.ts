@@ -25,7 +25,7 @@ export const blockedCountries = [
   ];
   
   export const countries = [
-    'Select a country', // You can add a default option
+    'Select a country', 
     'Albania',
     'Algeria',
     "Andorra",
@@ -36,12 +36,32 @@ export const blockedCountries = [
     "Azerbaijan",
     "Afghanistan",
     "Bahamas",
+    "Botswana",
     "China",
+    "Canada",
     'Iran',
+    'Iraq',
+    'Lebanon',
+    'Liberia',
+    'Libya',
+    "Kenya",
+    'Malaysia',
+    'Montenegro',
+    'Myanmar',
+    'North Korea',
+    "Namibia",
+    'Romania',
+    'Russian Federation',
+    'Serbia',
+    'Sierra Leone',
+    'Slovenia',
+    'Sudan',
     "South Africa",
+    "Tanzania",
     "United Kingdom",
     "United States",
-    "Venezuela"
-    // Add more countries here
+    "Venezuela",
+    "Zambia",
+    "Zimbabwe"
   ];
   
