@@ -12,6 +12,8 @@ import {
   Paper,
   MenuItem,
   Popover,
+  Alert,
+  Snackbar,
 } from "@mui/material";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -47,6 +49,9 @@ const CreditCard: React.FC<CreditCardProps> = ({ onCardSubmit }) => {
   const [, setFocus] = useState<"number" | "name" | "expiry" | "cvc" | "country" | undefined>(undefined);
   const [isBlockedCountry, setIsBlockedCountry] = useState<boolean>(false);
   const [countryMenuAnchorEl, setCountryMenuAnchorEl] = useState<null | HTMLElement>(null);
+  const [alertOpen, setAlertOpen] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+  const [alertSeverity, setAlertSeverity] = useState<"success" | "error" | "info" | "warning">("error");
 
   const handleCountryClick = (event: MouseEvent<HTMLElement>) => {
     setCountryMenuAnchorEl(event.currentTarget);
@@ -76,9 +81,13 @@ const CreditCard: React.FC<CreditCardProps> = ({ onCardSubmit }) => {
 
   const handleButtonClick = () => {
     if (!cardDetails.number || !cardDetails.name || !cardDetails.expiry || !cardDetails.cvc || !cardDetails.country) {
-      alert("Please fill in all card details.");
+        setAlertMessage("Please fill in all card details.");
+        setAlertSeverity("error");
+        setAlertOpen(true);
     } else if (blockedCountries.includes(cardDetails.country)) {
-      alert("Card submission is blocked for the selected country.");
+        setAlertMessage("Card submission is blocked for the selected country.");
+        setAlertSeverity("error");
+        setAlertOpen(true);
     } else {
       const storedCards = JSON.parse(localStorage.getItem("creditCards") || "[]") as CardDetails[];
       const cardExists = storedCards.some((storedCard) => storedCard.number === cardDetails.number);
@@ -90,10 +99,18 @@ const CreditCard: React.FC<CreditCardProps> = ({ onCardSubmit }) => {
         );
 
         onCardSubmit(cardDetails);
+        setAlertMessage("Card submitted successfully.");
+        setAlertSeverity("success");
+        setAlertOpen(true);
         setIsBlockedCountry(false);
-        navigate("/table");
+        setTimeout(() => {
+            setAlertOpen(false);
+            navigate("/table");
+          }, 3000);
       } else {
-        alert("This card has already been captured."); 
+        setAlertMessage("This card has already been captured.");
+        setAlertSeverity("error");
+        setAlertOpen(true);
       }
     }
   };
@@ -116,6 +133,22 @@ const CreditCard: React.FC<CreditCardProps> = ({ onCardSubmit }) => {
   };
 
   return (
+    <Box>
+        <Box>
+        <Snackbar
+        open={alertOpen}
+        autoHideDuration={6000} // Adjust the duration as needed
+        onClose={() => setAlertOpen(false)}
+      >
+        <Alert
+        variant="filled"
+          severity={alertSeverity}
+          sx={{ width: '100%' }}
+        >
+          {alertMessage}
+        </Alert>
+      </Snackbar>
+        </Box>
     <Container maxWidth="sm">
       <Grid
         container
@@ -313,6 +346,7 @@ const CreditCard: React.FC<CreditCardProps> = ({ onCardSubmit }) => {
         </Box>
       </Grid>
     </Container>
+    </Box>
   );
 };
 
