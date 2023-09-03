@@ -92,6 +92,11 @@ To delete a card, click the "Delete" button (trash can icon) next to the card in
 ![Screenshot (113)](https://github.com/audreythando/credit-card-system/assets/82891759/71a453e2-a9e3-47d8-9617-44a4549cae9b)
 
 
+
+![Screenshot (115)](https://github.com/audreythando/credit-card-system/assets/82891759/7fbd4b1e-411c-4e96-8391-25f67a18b1df)
+
+
+
 6. Technical Details
 
 
