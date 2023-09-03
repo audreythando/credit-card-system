@@ -2,35 +2,17 @@ import React from "react";
 import { Grid, Button, Typography, Container, Paper, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import Cards from "../assets/images/credit.png";
+import './CreditCard.css'
 
 const LandingPage = () => {
   return (
-    <Box style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh" }}>
-    <Container >
+    <Container className="landing-container" >
       <Grid
         container
-        spacing={1}
-        justifyContent="center"
-        alignItems="center"
-        sx={{ minHeight: "100%" , width:"1050px"}}
+        spacing={3}
       >
-        <Box
-          component={Paper}
-          elevation={3}
-          sx={{
-            padding: 3,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            backgroundImage:
-              "linear-gradient(to bottom right, #385170, #142d4c, #38598b)",
-            borderRadius: "10px",
-            backgroundColor: "transparent",
-            minHeight: "100%",
-          }}
-        >
-          <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} sm={6}>
+              <Box>
               <Typography variant="h4" gutterBottom  color="inherit">
                 Welcome to Our Credit Card Validation System
               </Typography>
@@ -46,20 +28,16 @@ The system allows Admins to submit and validate all credit cards easily by flagi
               >
                 Login
               </Button>
+              </Box>
             </Grid>
 
-            <Grid item xs={12} md={6}>
-              <Grid container spacing={2}>
-                <Grid item xs={12}>
+            <Grid item xs={12} sm={6}>
+              <Box className="image-container">
                   <img src={Cards} alt="Credit Card 1" width="100%" />
-                </Grid>
+                </Box>
               </Grid>
             </Grid>
-          </Grid>
-        </Box>
-      </Grid>
     </Container>
-    </Box>
   );
 };
 
