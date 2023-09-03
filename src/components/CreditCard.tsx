@@ -333,7 +333,7 @@ const CreditCard: React.FC<CreditCardProps> = ({ onCardSubmit }) => {
                     fullWidth
                     variant="outlined"
                     color="primary"
-                    sx={{ mt: 3, mb: 2 , borderRadius: "25px" }}
+                    sx={{ mt: 3, mb: 2 , borderRadius: "25px", backgroundColor:" #38598b" }}
                     disabled={isSubmitting || isBlockedCountry}
                     onClick={handleButtonClick}
                   >

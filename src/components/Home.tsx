@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Button, Typography, Container, Paper, Box } from "@mui/material";
+import { Grid, Button, Typography, Container, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import Cards from "../assets/images/credit.png";
 import './CreditCard.css'
@@ -24,7 +24,7 @@ The system allows Admins to submit and validate all credit cards easily by flagi
                 color="primary"
                 component={Link}
                 to="/register"
-                sx={{ mt: 3, mb: 2, borderRadius: "25px"  }}
+                sx={{ mt: 3, mb: 2, borderRadius: "25px" , backgroundColor:" #38598b" }}
               >
                 Login
               </Button>

@@ -113,6 +113,9 @@ export default function ButtonAppBar() {
           className="drawer-background"
         >
           <List sx={{ backgroundColor: "#081f37", height: "100vh" }}>
+            <ListItem onClick={logout}>
+              <ListItemText primary="Home " />
+            </ListItem>
             <ListItem onClick={handleCreditCards}>
               <ListItemText primary="Credit Cards " />
             </ListItem>
