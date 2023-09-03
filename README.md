@@ -1,46 +1,118 @@
-# Getting Started with Create React App
+Credit Card System Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Credit Card System is a mobile responsive web application designed for users to manage , display, and submit credit card details for validation. It allows users to add, view, edit, and delete credit card information. 
 
-## Available Scripts
 
-In the project directory, you can run:
+![Screenshot (103)](https://github.com/audreythando/credit-card-system/assets/82891759/0af9f27f-0940-47b1-9ac0-2cb8e75fee68)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+2. System Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+The Credit Card System consists of two main components:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Credit Card Entry: This component allows users to enter new credit card details. It includes validation for card number, name, expiration date, CVV, and country. Users can submit new cards, and the data is stored in the local storage.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Credit Card Table: This component displays a table of credit card information, including card number, name, expiration date, CVV, and country. Users can search for specific cards, edit card details, and delete cards. The data is retrieved from local storage.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   
+To run the Credit Card System on your local environment, follow these steps:
 
-## Learn More
+Clone the repository from GitHub.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Navigate to the project directory in your terminal.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run the following command to install dependencies:
+
+Copy code
+npm install
+Start the development server:
+
+Copy code
+npm start
+Open a web browser and access the application at http://localhost:3000.
+
+
+
+
+4. Usage
+
+
+The system uses Google authentication enabled by  Firebase to allow users to authenticate before use.
+
+
+
+ ![Screenshot (104)](https://github.com/audreythando/credit-card-system/assets/82891759/f9b80b07-dcfd-4d49-adff-5b1f5678ca9f)
+
+
+   
+
+5.Credit Card Entry 
+
+
+
+Access the Credit Card Entry page by clicking on the "Sign In with Google" button which then navigates you to the Credit Card page .
+
+Enter the credit card details, including card number, name, expiration date, CVV, and country.If card is from a credit card blocked country then that card will not be able to be validated or submitted.
+
+Click the "Submit Card" button to add the card. The card data will be stored in local storage after being validated.
+
+
+![Screenshot (110)](https://github.com/audreythando/credit-card-system/assets/82891759/c44e800a-18b0-4dc9-95f8-672471e8c6bb)
+
+
+
+
+
+Credit Card Table 
+
+
+Access the Credit Card Table page after clicking on the "Submit" button on the Credit Card page or the drawer in the Navbar.
+
+Use the search fields to filter cards by card number, name, or country.
+
+The table displays the credit card information, including card number, name, expiration date, CVV, and country.
+
+Editing and Deleting Cards 
+To edit a card, click the "Edit" button (pencil icon) next to the card in the table. This will open an edit modal.
+
+In the edit modal, update the card details and click "Save" to save the changes.
+
+To delete a card, click the "Delete" button (trash can icon) next to the card in the table.
+
+
+![Screenshot (113)](https://github.com/audreythando/credit-card-system/assets/82891759/71a453e2-a9e3-47d8-9617-44a4549cae9b)
+
+
+6. Technical Details
+
+
+The application is built using React and Material-UI components.
+
+Credit card details are stored in local storage.
+
+Form validation is implemented using Yup for schema validation.
+
+Icons from Material-UI and react-credit-cards-2 are used for UI elements.
+
+
+
+7. Contributing 
+Contributions to the Credit Card System project are welcome. If you'd like to contribute code, report issues, or suggest improvements, please follow the guidelines in the CONTRIBUTING.md file in the repository.
+
+8. License 
+The Credit Card System is released under the MIT License. You are free to use, modify, and distribute the application as per the terms of the license.
+
+This documentation provides an overview of the Credit Card System, its features, installation instructions, and usage guidelines. If you have any further questions or need assistance, please refer to the GitHub repository for additional resources and support.
+
+Thank you for using the Credit Card System!
+
+Feel free to replace placeholders like your-repo-url with actual URLs or information specific to your project. Additionally, consider adding more detailed sections or screenshots if necessary to provide a comprehensive guide to your users.
