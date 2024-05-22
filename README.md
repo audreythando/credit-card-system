@@ -55,7 +55,8 @@ The system uses Google authentication enabled by Firebase to allow users to auth
   
 ![Screenshot (106)](https://github.com/audreythando/credit-card-system/assets/82891759/3d972589-e870-4c47-9109-20813e0919c4)
 
-![Screenshot (113)](https://github.com/audreythando/credit-card-system/assets/82891759/b625857a-9a12-42be-842b-d8a002a57309)
+
+![Screenshot (115)](https://github.com/audreythando/credit-card-system/assets/82891759/486e8704-1bf6-49e2-91b2-a48fee0716d8)
 
 
 ### 2. Credit Card Table
@@ -69,9 +70,9 @@ The system uses Google authentication enabled by Firebase to allow users to auth
 - **Edit a card**: Click the "Edit" button (pencil icon) next to the card in the table to open an edit modal. Update the card details and click "Save" to save the changes.
 - **Delete a card**: Click the "Delete" button (trash can icon) next to the card in the table to remove it.
 
-![Credit Card Table Screenshot](screenshot_113.png)
-![Edit and Delete Screenshot](screenshot_115.png)
 
+
+![Screenshot (113)](https://github.com/audreythando/credit-card-system/assets/82891759/b625857a-9a12-42be-842b-d8a002a57309)
 ## ⚙️ Technical Details
 
 - **React** and **Material-UI** components are used to build the application.
