@@ -8,6 +8,7 @@ import AIInsightPanel from "../components/dashboard/AIInsightPanel";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
 import RecentTransactions from "../components/dashboard/RecentTransactions";
 import SpendingChart from "../components/dashboard/SpendingChart";
+import CardSummaryPanel from "../components/dashboard/CardSummaryPanel";
 
 export default function DashboardPage() {
   return (
@@ -28,6 +29,7 @@ export default function DashboardPage() {
           <AIInsightPanel />
           <SpendingChart />
           <RecentTransactions />
+          <CardSummaryPanel />
         </div>
       </main>
     </div>
