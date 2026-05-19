@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #020617, #0f172a);
+  color: white;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  padding: 2rem;
+}
+
+.logo {
+  color: #8b5cf6;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #cbd5e1;
+}
+
+.sidebar li:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.dashboard-main h1 {
+  font-size: 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 1.5rem;
+  border-radius: 24px;
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.credit-card-preview {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  padding: 2rem;
+  border-radius: 28px;
+  min-height: 220px;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+}
+
+.credit-card-preview h2 {
+  margin-top: 4rem;
+  font-size: 32px;
+  letter-spacing: 4px;
+}
+
+.ai-panel {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2rem;
+  border-radius: 28px;
+}
+
+.ai-panel h2 {
+  margin-bottom: 1rem;
+}
+
+.ai-panel p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.ai-panel button {
+  margin-top: 1.5rem;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  border: none;
+  padding: 14px 22px;
+  border-radius: 14px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.ai-panel button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: auto;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+}

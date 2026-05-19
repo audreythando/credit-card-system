@@ -1,15 +1,30 @@
+// @ts-ignore: Importing CSS for side effects without type declarations
+import "./DashboardPage.css";
+
+import Sidebar from "../components/dashboard/Sidebar";
+import StatCard from "../components/dashboard/StatCard";
+import CreditCardPreview from "../components/dashboard/CreditCardPreview";
+import AIInsightPanel from "../components/dashboard/AIInsightPanel";
+
 export default function DashboardPage() {
   return (
-    <div
-      style={{
-        background: "#0B1120",
-        minHeight: "100vh",
-        color: "white",
-        padding: "2rem",
-      }}
-    >
-      <h1>CreditAI Dashboard</h1>
-      <p>Your AI-powered credit card management system.</p>
+    <div className="dashboard-container">
+      <Sidebar />
+
+      <main className="dashboard-main">
+        <h1>Welcome back, Audrey 👋</h1>
+
+        <div className="stats-grid">
+          <StatCard title="Total Balance" value="$8,245" />
+          <StatCard title="Monthly Spend" value="$2,345" />
+          <StatCard title="Credit Score" value="742" />
+        </div>
+
+        <div className="dashboard-content">
+          <CreditCardPreview />
+          <AIInsightPanel />
+        </div>
+      </main>
     </div>
   );
 }
