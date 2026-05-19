@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './App.css';
 import Register from './components/Register';
 import { ThemeProvider, createTheme, CssBaseline, Container, Grid } from '@mui/material';
 import {
