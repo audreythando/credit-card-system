@@ -7,6 +7,7 @@ import CreditCardPreview from "../components/dashboard/CreditCardPreview";
 import AIInsightPanel from "../components/dashboard/AIInsightPanel";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
 import RecentTransactions from "../components/dashboard/RecentTransactions";
+import SpendingChart from "../components/dashboard/SpendingChart";
 
 export default function DashboardPage() {
   return (
@@ -25,6 +26,7 @@ export default function DashboardPage() {
         <div className="dashboard-content">
           <CreditCardPreview />
           <AIInsightPanel />
+          <SpendingChart />
           <RecentTransactions />
         </div>
       </main>

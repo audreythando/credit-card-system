@@ -232,3 +232,31 @@ body {
   color: #94a3b8;
   margin: 5px 0 0;
 }
+
+.chart-card {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 28px;
+  padding: 2rem;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 300px;
+}
+
+.chart-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-center h2 {
+  margin: 0;
+}
+
+.chart-center p {
+  color: #94a3b8;
+}
