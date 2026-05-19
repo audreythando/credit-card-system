@@ -46,35 +46,14 @@ function App(CardDetails: any) {
   };
   
 
+function App() {
   return (
-        <ThemeProvider theme={customTheme}>
-        <CssBaseline />
-        <>
-        <Navbar />
-        <Container maxWidth="sm">
-            <Grid
-              container
-              spacing={1}
-              justifyContent="center"
-              alignItems="center"
-              style={{ minHeight: '100vh' }}
-            >
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/register" element={<Register />} />
-                * <Route
-                  path="/credit-card"
-                  element={<CreditCard onCardSubmit={handleCardSubmit} />}
-                />
-
-
-                <Route  path='/table' element={<CreditCardTable creditCards={capturedCards} />} /> 
-              </Routes>
-            </Grid>
-          </Container>
-        </>
-  </ThemeProvider>
-      
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
