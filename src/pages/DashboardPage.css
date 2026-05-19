@@ -54,6 +54,39 @@ body {
   font-size: 40px;
 }
 
+.dashboard-main {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.stat-card,
+.chart-card,
+.transactions-card,
+.summary-panel,
+.ai-panel {
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.dashboard-content {
+  align-items: start;
+}
+
+.credit-card-preview {
+  position: relative;
+  overflow: hidden;
+}
+
+.credit-card-preview::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  right: -70px;
+  top: -80px;
+}
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
