@@ -5,6 +5,8 @@ import Sidebar from "../components/dashboard/Sidebar";
 import StatCard from "../components/dashboard/StatCard";
 import CreditCardPreview from "../components/dashboard/CreditCardPreview";
 import AIInsightPanel from "../components/dashboard/AIInsightPanel";
+import DashboardHeader from "../components/dashboard/DashboardHeader";
+import RecentTransactions from "../components/dashboard/RecentTransactions";
 
 export default function DashboardPage() {
   return (
@@ -12,7 +14,7 @@ export default function DashboardPage() {
       <Sidebar />
 
       <main className="dashboard-main">
-        <h1>Welcome back, Audrey 👋</h1>
+<DashboardHeader />
 
         <div className="stats-grid">
           <StatCard title="Total Balance" value="$8,245" />
@@ -23,6 +25,7 @@ export default function DashboardPage() {
         <div className="dashboard-content">
           <CreditCardPreview />
           <AIInsightPanel />
+          <RecentTransactions />
         </div>
       </main>
     </div>
